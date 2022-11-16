@@ -50,11 +50,9 @@ int _mycd(info_t *info)
 			chdir_ret = /* TODO: what should this be? */
 				chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
 		else
-			chdir_ret = chdir(dir);
-
-	
-
-else if (_strcmp(info->argv[1], "-") == 0)
+		chdir_ret = chdir(dir);
+	}
+	else if (_strcmp(info->argv[1], "-") == 0)
 	{
 		if (!_getenv(info, "OLDPWD="))
 		{
@@ -86,7 +84,7 @@ else if (_strcmp(info->argv[1], "-") == 0)
  * _myhelp - changes the current directory of the process
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
- *  Return: Always 
+ *  Return: Always
  */
 int _myhelp(info_t *info)
 {
