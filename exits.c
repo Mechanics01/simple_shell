@@ -70,5 +70,5 @@ char *_strchr(char *s, char c)
 			return (s);
 	} while (*s++ != '\0');
 
-	return (NUL);
+	return (NULL);
 }
