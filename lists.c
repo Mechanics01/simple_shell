@@ -112,7 +112,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
 	if (!index)
 	{
 		node = *head;
-		*head = (*hed)->next;
+		*head = (*head)->next;
 		free(node->str);
 		free(node);
 		return (1);
